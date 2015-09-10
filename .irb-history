@@ -1,0 +1,50 @@
+start_test_server_in_background
+query("* text:'Email already registered. Forgot Your Password?'")
+"button marked:'Validate'"
+query "button marked:'Validate'"
+exit
+start_test_server_in_background
+query("* text:'Sign in'")
+query("* text:'Email or password is incorrect'")
+query("* text:'Forgot Your Password'")
+query("* text:'Forgot Your Password?'")
+exit
+start_test_server_in_background
+query("* text:'Email or password is incorrect?'")
+query("* text:'Email or password is incorrect'")
+exit
+start_test_server_in_background
+element_exists("* marked:'#{txtEmailOrPasswordWasIncorrect}'")
+element_exists("txtEmailOrPasswordWasIncorrect")
+query("* text:'Email or password is incorrect'"
+element_exists("Email or password is incorrect")
+element_exists("Password")
+element_exists("txtPassword")
+element_visible("txtPassword")
+check_element_exists("txtPassword")
+check_element_exists("txtPassword")exit
+exit
+start_test_server_in_background
+element_exist "* text:'Email or password is incorrect'"
+query("* text:'Email or password is incorrect'")
+check_element_exists("view marked:'#{txtEmailOrPasswordWasIncorrect}'")
+start_test_server_in_background
+check_element_exists("view marked:'#{txtEmailOrPasswordWasIncorrect}'")
+check_element_exists("view marked:'#{txtEmailOrPasswordWasIncorrect}'")
+check_element_exists("view marked:'#{txtEmailOrPasswordWasIncorrect}'")
+check_element_exists("*view marked:'#{txtEmailOrPasswordWasIncorrect}'")
+check_element_exists("view marked:'#{txtEmailOrPasswordWasIncorrect}'")
+check_element_exists("view marked:'#{Email or password is incorrect}'")
+exit
+start_test_server_in_background
+query("* text:'Skip'"[A
+query("* text:'Skip'")
+query("* text:'Skip")
+query("* text:'Skip'")
+query("* text:'Skip'")
+exit
+exit
+start_test_server_in_background
+query("* text:'Email'")
+query("* text:'Send'")
+exit
